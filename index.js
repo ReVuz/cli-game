@@ -15,7 +15,7 @@ const sleep = (ms = 2000) => new Promise((resolve) => setTimeout(resolve, ms));
 console.clear();
 
 async function Welcome() {
-    const title = chalkAnimation.glitch("🎉 EMOJI QUEST! 🎉");   
+    const title = chalkAnimation.glitch("🎉 EMOJI QUEST! 🎉",0.5);   
     await sleep();
     title.stop();    
     const gameTitle = chalkAnimation.rainbow("🎮 The Ultimate Emoji Challenge 🎮\n");
@@ -159,13 +159,14 @@ async function handleAnswer(isCorrect) {
 
 function Winner() {
     console.clear();
-    const msg = `${PlayerName} WON🏆`;
+    const msg = `${PlayerName}  WON!`;
     
     figlet(msg, (err, data) => {
         console.log(gradient.rainbow.multiline(data));
         console.log(`\n${chalk.green('🌟 Congratulations on conquering the Emoji Quest! 🌟')}\n`);
+        console.log("Ok bie 💀 💀 💀")
     });
-    console.log("Ok bie 💀 💀 💀")
+    
 }
 
 // Main game flow
